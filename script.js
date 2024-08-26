@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <button id="download-meme">Download Meme</button>
                 </center>
               </body>
+              <script src="script.js"></script>
             </html>
           `);
 
