@@ -45,8 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <title>Generated Meme</title>
               </head>
               <body>
+              <link rel="stylesheet" href="styles.css">
                 <center>
                   <img src="${memeUrl}" alt="Generated Meme"/>
+                  <br>
+                  <br>
                   <button id="download-meme">Download Meme</button>
                 </center>
               </body>
