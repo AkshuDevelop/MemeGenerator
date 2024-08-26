@@ -39,32 +39,37 @@ document.addEventListener("DOMContentLoaded", function () {
         if (data.success) {
           const memeUrl = data.data.url;
           const popupWindow = window.open("", "_blank", "width=600,height=600");
+
           popupWindow.document.write(`
             <html>
               <head>
                 <title>Generated Meme</title>
+                <link rel="stylesheet" href="styles.css">
               </head>
               <body>
-              <link rel="stylesheet" href="styles.css">
                 <center>
-                  <img src="${memeUrl}" alt="Generated Meme"/>
-                  <br>
-                  <br>
+                  <img src="${memeUrl}" alt="Generated Meme" id="generated-meme"/>
+                  <br><br>
                   <button id="download-meme">Download Meme</button>
                 </center>
+                <script>
+                  document.getElementById("download-meme").addEventListener("click", function () {
+                    fetch("${memeUrl}")
+                      .then(response => response.blob())
+                      .then(blob => {
+                        const link = document.createElement("a");
+                        link.href = window.URL.createObjectURL(blob);
+                        link.download = "meme.jpg";
+                        link.click();
+                        window.URL.revokeObjectURL(link.href); // Clean up after download
+                      })
+                      .catch(error => console.error("Download failed:", error));
+                  });
+                </script>
               </body>
-              <script src="script.js"></script>
             </html>
           `);
-
-          popupWindow.document
-            .getElementById("download-meme")
-            .addEventListener("click", function () {
-              const link = document.createElement("a");
-              link.href = memeUrl;
-              link.download = "meme.jpg";
-              link.click();
-            });
+          popupWindow.document.close();
         } else {
           alert("Failed to generate meme: " + data.error_message);
         }
