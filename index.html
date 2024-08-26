@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/Favicon_Transparent.png">
+  </head>
+  <body>
+    <img src="Images/Logo.png" id="logo" />
+    <br>
+
+    <div class="container">
+      <center><img src="Images/Meme Text.png" id="meme" /></center>
+    </div>
+
+    <div id="SelectionMeme"><center><font class="selectfont">Select the type of meme...</font></center></div>
+    <br>
+    <br>
+
+    <div>
+      <center>
+        <select id="template">
+        </select>
+      </center>
+    </div>
+
+    <br />
+
+    <div>
+      <center>
+        <input
+          type="text"
+          id="top-text"
+          class="input"
+          placeholder="Top Text..."
+        />
+
+        <input
+          type="text"
+          id="bottom-text"
+          class="input"
+          placeholder="Bottom Text..."
+        />
+      </center>
+    </div>
+
+    <div>
+      <center>
+        <a href="generate-meme-image" id="generate">
+          <img
+            src="Images/Generate Button.png"
+            alt="Generate Button"
+            id="generate-meme-image"
+          />
+        </a>
+      </center>
+    </div>
+
+    <div class="social-platforms">
+      <a href="https://www.instagram.com/_akshu.hi/" ><img src="Images/InstagramIcon.png" id="instagram" class="social"></img></a>
+      <a href="https://github.com/AkshuDevelop" ><img src="Images/GithubIcon.png" id="Github" class="social"></img></a>
+      <a href="https://www.linkedin.com/in/akshudevelop/" ><img src="Images/LinkedInIcon.png" id="LinkedIn" class="social"></img></a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
