@@ -47,10 +47,20 @@ document.addEventListener("DOMContentLoaded", function () {
               <body>
                 <center>
                   <img src="${memeUrl}" alt="Generated Meme"/>
+                  <button id="download-meme">Download Meme</button>
                 </center>
               </body>
             </html>
           `);
+
+          popupWindow.document
+            .getElementById("download-meme")
+            .addEventListener("click", function () {
+              const link = document.createElement("a");
+              link.href = memeUrl;
+              link.download = "meme.jpg";
+              link.click();
+            });
         } else {
           alert("Failed to generate meme: " + data.error_message);
         }
