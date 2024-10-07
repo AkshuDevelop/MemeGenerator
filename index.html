@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Generator</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="images/Favicon_Transparent.png">
+    <link rel="icon" href="images/Favicon_Transparent.png" />
   </head>
   <body>
     <img src="Images/Logo.png" id="logo" />
-    <br>
+    <br />
 
     <div class="container">
       <center><img src="Images/Meme Text.png" id="meme" /></center>
     </div>
 
-    <div id="SelectionMeme"><center><font class="selectfont">Select the type of meme...</font></center></div>
-    <br>
-    <br>
+    <div id="SelectionMeme">
+      <center>
+        <font class="selectfont">Select the type of meme...</font>
+      </center>
+    </div>
+    <br />
+    <br />
 
     <div>
       <center>
-        <select id="template">
-        </select>
+        <select id="template"></select>
       </center>
     </div>
 
@@ -59,9 +62,46 @@
     </div>
 
     <div class="social-platforms">
-      <a href="https://www.instagram.com/_akshu.hi/" ><img src="Images/InstagramIcon.png" id="instagram" class="social"></img></a>
-      <a href="https://github.com/AkshuDevelop" ><img src="Images/GithubIcon.png" id="Github" class="social"></img></a>
-      <a href="https://www.linkedin.com/in/akshudevelop/" ><img src="Images/LinkedInIcon.png" id="LinkedIn" class="social"></img></a>
+      <a href="https://www.instagram.com/_akshu.hi/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 30 30"
+          class="social"
+        >
+          <path
+            d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"
+          />
+        </svg>
+      </a>
+      <a href="https://github.com/AkshuDevelop">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          class="social"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+            fill="#24292f"
+          />
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/akshudevelop/">
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="social"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM16.9605 19.8778H11.5216V36.2196H16.9605V19.8778ZM17.3188 14.8227C17.2835 13.2204 16.1377 12 14.277 12C12.4164 12 11.2 13.2204 11.2 14.8227C11.2 16.3918 12.3805 17.6473 14.2064 17.6473H14.2412C16.1377 17.6473 17.3188 16.3918 17.3188 14.8227ZM36.5754 26.8497C36.5754 21.8303 33.8922 19.4941 30.3131 19.4941C27.4254 19.4941 26.1326 21.0802 25.4107 22.1929V19.8783H19.9711C20.0428 21.4117 19.9711 36.22 19.9711 36.22H25.4107V27.0934C25.4107 26.605 25.446 26.1178 25.5898 25.7681C25.9829 24.7924 26.8779 23.7822 28.3805 23.7822C30.3494 23.7822 31.1365 25.2807 31.1365 27.4767V36.2196H36.5752L36.5754 26.8497Z"
+            fill="black"
+          />
+        </svg>
+      </a>
     </div>
 
     <script src="script.js"></script>
